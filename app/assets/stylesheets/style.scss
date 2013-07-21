@@ -1,0 +1,17 @@
+@import "colors";
+
+
+// Custom Element Styling
+.top-bar-section li a:not(.button):hover {
+    background: $white !important;
+}
+
+
+// Footer
+.footer{
+    margin-top: 50px;
+    color: $grayLight;
+    a{
+        color: $gray;
+    }
+}

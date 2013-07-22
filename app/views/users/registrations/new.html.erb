@@ -2,9 +2,13 @@
   <div class="large-6 large-centered columns">
     <h1 class="subheader">Sign up</h1>
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-        <%= devise_error_messages! %>
+    <%= devise_error_messages! %>
+
+    <div><%= f.label :name , class: "subheader" %><br />
+      <%= f.text_field :name, :autofocus => true %>
+    </div>   
     <div><%= f.label :email , class: "subheader" %><br />
-      <%= f.email_field :email, :autofocus => true %>
+      <%= f.email_field :email %>
     </div>
     <div><%= f.label :password, class: "subheader"%><br />
       <%= f.password_field :password %>

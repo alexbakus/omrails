@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="large-6 large-centered columns">
+    <h1 class="subheader">Sign up</h1>
+      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+    <div><%= f.label :email , class: "subheader" %><br />
+      <%= f.email_field :email, :autofocus => true %>
+    </div>
+    <div><%= f.label :password, class: "subheader"%><br />
+      <%= f.password_field :password %>
+    </div>
+    <div><%= f.label :password_confirmation, class: "subheader" %><br />
+      <%= f.password_field :password_confirmation %>
+    </div>
+    <div><%= f.submit "Sign up", class: "btn-flat-large" %>
+    </div>
+    <% end %>
+    <%= render "users/shared/links" %>
+  </div>
+</div>

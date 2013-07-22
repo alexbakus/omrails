@@ -21,16 +21,18 @@
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
     <div class="row">
     <div class="large-12 columns">
+      <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert-box success alert-#{name}") %>
+      <% end %>
+      <%= yield %>
 
-    <%= render 'layouts/header' %>
-    <%= yield %>
-
-    <%= render 'layouts/footer' %>
-    
-    <%= javascript_include_tag "application" %>
-  </div>
-  </div>
+      <%= render 'layouts/footer' %>
+      
+      <%= javascript_include_tag "application" %>
+    </div>
+    </div>
   </body>
 </html>

@@ -24,16 +24,15 @@
             <li class="divider"></li>
             <li><%= link_to "About" , about_path %></li>
                 <li class="divider"></li>
-                <li class="has-dropdown">
-                  <a href="#">Sign in</a>
-                  <ul class="dropdown">
-                    <li><label>User Name</label></li>
-                    <li><a href="#">Subdropdown Option</a></li>
-                    <li class="divider"></li>
-                    <li><label>Password</label></li>
-                    <li><a href="#">Dropdown Option</a></li>
-                  </ul>
-                </li>
+                <% if user_signed_in? %>
+                  <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+                  <li class="divider"></li>
+                  <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+                  <li class="divider"></li>
+                <% else %>
+                  <li><%= link_to "Sign in", new_user_session_path %></li>
+                  <li class="divider"></li>
+                <% end %>
           </ul>
         </section>
       </nav>

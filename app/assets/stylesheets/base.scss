@@ -1019,7 +1019,7 @@ $topbar-menu-icon-color-toggled: $white;
   @extend .btn-flat;
   @include button-size($padding:$button-lrg);
 }
-.btn-flat-large-sucess {
+.btn-flat-large-success {
   @extend .btn-flat-large;
   @include button-style($bg:$success-color);
 }

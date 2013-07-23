@@ -2,11 +2,10 @@
   <div class="large-6 large-centered columns">
   <h1 class="subheader">Forgot your password?</h1>
 
-    <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+    <%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }, defaults: { label_html: { class: 'subheader' }}) do |f| %>
     <%= devise_error_messages! %>
 
-    <div><%= f.label :email, class: "subheader" %><br />
-    <%= f.email_field :email, :autofocus => true %></div>
+      <%= f.input :email, :autofocus => true %>
 
     <div class="column"><%= f.submit "Send me reset password instructions", class: "btn-flat-large" %></div>
     <% end %>

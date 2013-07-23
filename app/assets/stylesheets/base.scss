@@ -1012,7 +1012,7 @@ $topbar-menu-icon-color-toggled: $white;
 .btn-flat {
   @include button-base;
   @include button-size;
-  @include button-style($bg:$primary-color, $radius:false, $disabled:false)
+  @include button-style($bg:$primary-color, $radius:false, $disabled:false);
 }
 
 .btn-flat-large {
@@ -1022,4 +1022,14 @@ $topbar-menu-icon-color-toggled: $white;
 .btn-flat-large-success {
   @extend .btn-flat-large;
   @include button-style($bg:$success-color);
+}
+
+// Custom Switch
+
+.label radio {
+  @include switch;
+}
+
+.input radio_buttons {
+  @include switch;
 }

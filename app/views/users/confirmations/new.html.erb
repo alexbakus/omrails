@@ -2,11 +2,10 @@
   <div class="large-6 large-centered columns">
   <h1 class="subheader">Resend confirmation instructions</h1>
 
-    <%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
+    <%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }, defaults: { label_html: { class: 'subheader' }}) do |f| %>
     <%= devise_error_messages! %>
 
-    <div><%= f.label :email, class: "subheader" %><br />
-    <%= f.email_field :email, :autofocus => true %></div>
+    <%= f.email :email, :autofocus => true %>
 
     <div class="column"><%= f.submit "Resend confirmation instructions", class: "btn-flat-large" %></div>
     <% end %>

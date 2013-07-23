@@ -2,15 +2,14 @@
   <div class="large-6 large-centered columns">
   <h1 class="subheader">Change your password</h1>
 
-  <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+  <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }, defaults: { label_html: { class: 'subheader' }}) do |f| %>
   <%= devise_error_messages! %>
-  <%= f.hidden_field :reset_password_token, class: "subheader" %>
+  <%= f.hidden_field :reset_password_token %>
 
-  <div><%= f.label :password, "New password", class: "subheader" %><br />
-  <%= f.password_field :password, :autofocus => true %></div>
+  <%= f.password :password, :autofocus => true %>
 
-  <div><%= f.label :password_confirmation, "Confirm new password", class: "subheader" %><br />
-  <%= f.password_field :password_confirmation %></div>
+  <%= f.label :password_confirmation, 'Confirm new password' %>
+  <%= f.password_field :password_confirmation %>
 
   <div class="column"><%= f.submit "Change my password", class: "btn-flat-large" %></div>
   <% end %>

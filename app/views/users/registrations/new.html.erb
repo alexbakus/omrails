@@ -1,21 +1,13 @@
 <div class="row">
   <div class="large-6 large-centered columns">
     <h1 class="subheader">Sign up</h1>
-      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
+      <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), defaults: { label_html: { class: 'subheader' }}) do |f| %>
+      
+      <%= devise_error_messages! %>
+      <%= f.input :name, :autofocus => true %>
+      <%= f.input :email %>
+      <%= f.input :password %>
 
-    <div><%= f.label :name , class: "subheader" %><br />
-      <%= f.text_field :name, :autofocus => true %>
-    </div>   
-    <div><%= f.label :email , class: "subheader" %><br />
-      <%= f.email_field :email %>
-    </div>
-    <div><%= f.label :password, class: "subheader"%><br />
-      <%= f.password_field :password %>
-    </div>
-    <div><%= f.label :password_confirmation, class: "subheader" %><br />
-      <%= f.password_field :password_confirmation %>
-    </div>
     <div><%= f.submit "Sign up", class: "btn-flat-large" %>
     </div>
     <% end %>

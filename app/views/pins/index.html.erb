@@ -1,23 +1,16 @@
 <h1 class="subheader">Listing pins</h1>
 
-<table>
-  <tr>
-    <th><h4 class="subheader">Description</h3></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @pins.each do |pin| %>
-  <tr>
-    <td><%= pin.description %></td>
-    <td><%= link_to 'Show', pin %></td>
-    <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-    <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
+<div class="row">
+  <table class="large-12 columns">
+      <tr>
+        <th><h4 class="subheader left">Description</h3></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    <%= render @pins %>
+  </table>
+</div>
 <br />
 
 <%= link_to 'New Pin', new_pin_path, class: "button" %>

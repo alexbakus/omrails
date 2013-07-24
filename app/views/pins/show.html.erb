@@ -1,10 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Description:</b>
-  <%= @pin.description %>
-</p>
-
-
-<%= link_to 'Edit', edit_pin_path(@pin) %> |
-<%= link_to 'Back', pins_path %>
+<div class="row">
+  <div class="large-6 large-offset-3 columns">
+    <div class="panel">
+      
+      <p>
+        <%= @pin.description %>
+      </p>
+      <%= link_to 'Edit', edit_pin_path(@pin) %> |
+      <%= link_to 'Back', pins_path %>
+    </div>
+  </div>
+</div>

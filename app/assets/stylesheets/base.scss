@@ -44,8 +44,8 @@
 // Modular html classes
 // $include-html-grid-classes: $include-html-classes;
 // $include-html-visibility-classes: $include-html-classes;
-// $include-html-button-classes: $include-html-classes;
 // $include-html-form-classes: $include-html-classes;
+// $include-html-button-classes: $include-html-button-classes;
 // $include-html-media-classes: $include-html-classes;
 // $include-html-section-classes: $include-html-classes;
 // $include-html-reveal-classes: $include-html-classes;
@@ -55,6 +55,7 @@
 // $include-html-panel-classes: $include-html-classes;
 // $include-html-pricing-classes: $include-html-classes;
 // $include-html-progress-classes: $include-html-classes;
+
 
 //
 // Grid Variables
@@ -187,7 +188,7 @@ $form-spacing: emCalc(20px);
 $label-font-size: emCalc(18px);
 // $label-font-weight: 500;
 // $label-font-color: lighten(#000, 30%);
-$label-bottom-margin: emCalc(-10px);
+$label-bottom-margin: emCalc(5px);
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
 $input-font-size: emCalc(24px);
@@ -241,7 +242,7 @@ $input-error-message-font-color-alt: $grayDark;
 
 // We use these to control button text styles.
 // $button-font-family: inherit;
-// $button-font-color: #fff;
+$button-font-color: $white;
 $button-font-color-alt: $grayDark;
 // $button-font-med: emCalc(16px);
 // $button-font-tny: emCalc(11px);
@@ -1007,22 +1008,6 @@ $topbar-menu-icon-color-toggled: $white;
 
 
 // Custom Element Styling
-
-// Flat Large Buttons
-.btn-flat {
-  @include button-base;
-  @include button-size;
-  @include button-style($bg:$primary-color, $radius:false, $disabled:false);
-}
-
-.btn-flat-large {
-  @extend .btn-flat;
-  @include button-size($padding:$button-lrg);
-}
-.btn-flat-large-success {
-  @extend .btn-flat-large;
-  @include button-style($bg:$success-color);
-}
 
 // Custom Switch
 

@@ -4,7 +4,7 @@
 
     <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), defaults: { label_html: { class: 'subheader' }}) do |f| %>
     
-    <%= f.input :email %>
+    <%= f.input :email, :autofocus => true %>
     <%= f.input :password %>
     
     <% if devise_mapping.rememberable? %>
